@@ -1,0 +1,4 @@
+FROM mcr.microsoft.com/devcontainers/java:0-17-buster
+
+ARG CODER_SERVER_VERSION=4.11.0
+RUN curl -fsSL https://code-server.dev/install.sh | sh -s -- --method=standalone --version ${CODER_SERVER_VERSION} && PATH="~/.local/bin:$PATH"
